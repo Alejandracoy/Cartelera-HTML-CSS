@@ -1,0 +1,74 @@
+html{box-sizing: border-box;}
+
+*,*::before,*::after{box-sizing: inherit;}
+
+body{font-family: Arial, Helvetica, sans-serif;}
+
+img{width: 320px;  /*ancho*/
+    height: 400px;} /*alto*/
+
+    
+header{
+    background-color:  #4bab97; /*Color de fondo*/
+    color: #fff; /*Color de fuente*/
+    margin-top: 0px; /*Margen superior*/
+    padding: 10px; /*Espacio de adentro hacia afuera*/
+    text-align: center;} /*Alineación del texto*/
+
+.flip-card{
+        background-color:transparent; /*Transparenta el fondo*/
+        height: 400px; /*Alto*/
+        margin: auto; /*Margen*/
+        margin-bottom: 25px; /*Margen inferior*/
+        margin-top: 15px; /*Margen superior*/
+        perspective: 1000px; /*Perspectiva*/
+        width: 320px;} /*Ancho*/
+
+.flip-card-front{
+        background-color: white; /*Color de fondo*/
+        color: black;} /*Color de fuente*/
+        
+.flip-card-back{
+        background-color: black; /*Color de fondo*/
+        color: white;  /*Color de fuente*/
+        transform: rotateY(180deg);} /*Rota el contenido 180 grados*/
+
+
+.flip-card-front, .flip-card-back{
+    backface-visibility: hidden; /*Oculta el contenido trasero*/
+    height: 100%;  /*Alto*/
+    position: absolute; /*Posición del contenido*/
+    width: 100%;}    /*Ancho*/
+
+.flip-card-inner{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0,0.2); /*Sombras*/
+    height: 100%; /*Alto*/
+    text-align: center; /*Alineación del texto*/
+    transition: transform 0.6s; /*Transiciones, tiempo*/
+    transform-style: preserve-3d; /*Tipo de estilo*/
+    position: relative; /*Posición del contenido*/
+    width: 100%;} /*Ancho*/
+
+    .flip-card:hover .flip-card-inner{
+        transform: rotateY(180deg);}
+
+        .button{
+            background-color:  #e58859; /*Color de fondo*/
+            border: none; /*bordes*/
+            color: #fff; /*Color de fondo*/
+            display: inline-block; /*Posiciones absolutas del contenido en general*/
+            font-weight: bold; /*grosor de la fuente*/
+            text-decoration: none; /*Decoración del texto*/
+            text-transform: uppercase; /*determina si el texto es mayúscula o minúscula*/
+            padding: 20px; /*Espacio de adentro hacia afuera*/
+            width: 100%;} /*Ancho*/
+    .name{
+    font-size: 50px;} /*Tamaño de la fuente*/
+        
+    .cartelera{
+    font-weight: bold; /*grosor de la fuente*/
+    text-transform: uppercase;}/*determina si el texto es mayúscula o minúscula*/
+
+    .abs{
+        display: flex;
+    }
